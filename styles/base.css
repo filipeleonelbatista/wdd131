@@ -18,11 +18,11 @@ header {
 }
 
 header h1 {
-    font-weight: 400;
+    font-weight: 500;
     font-size: 1.5rem;
 }
 
-header .highlight {
+.highlight {
     color: #ffeb3b;
 }
 
@@ -69,12 +69,13 @@ nav a:hover {
     overflow: hidden;
 }
 
-.info-header {
+.info-box h2,
+.resources-box h2 {
     background: #1e4e79;
     color: #fff;
     padding: 0.75rem;
     font-size: 1.1rem;
-    text-align: center;
+    margin: 0;
 }
 
 .about-content {
@@ -83,21 +84,21 @@ nav a:hover {
     gap: 1rem;
 }
 
-.about-content .text {
+.text {
     flex: 2;
 }
 
-.about-content .photo img {
-    max-width: 150px;
+.photo img {
     border-radius: 4px;
 }
 
 .mad-header {
+    background: #1e4e79;
+    color: #fff;
     padding: 0.75rem;
     font-size: 1.1rem;
-    font-weight: 500;
+    margin: 0;
     text-align: center;
-    border-top: 1px solid #ccc;
 }
 
 .mad-content {
@@ -112,7 +113,6 @@ nav a:hover {
 }
 
 .flag img {
-    max-width: 100px;
     border: 1px solid #ccc;
 }
 
@@ -155,7 +155,7 @@ footer p {
     margin: 0.25rem 0;
 }
 
-footer span#currentYear,
+footer #currentYear,
 footer #lastModified {
     color: #ffeb3b;
     font-weight: bold;

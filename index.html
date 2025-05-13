@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WDD 131: Dynamic Web Fundamentals - Filipe de Leonel Batista</title>
+    <title>WDD 131 – Dynamic Web Fundamentals – Filipe de Leonel Batista</title>
     <meta name="description"
-        content="WDD 131 – Dynamic Web Fundamentals | Filipe de Leonel Batista | Course landing page">
+        content="WDD 131 – Dynamic Web Fundamentals | Filipe de Leonel Batista | Course landing page showcasing HTML, CSS and dynamic JS.">
     <meta name="author" content="Filipe de Leonel Batista">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +21,20 @@
 
 <body>
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals - <span class="highlight">Filipe de Leonel Batista</span></h1>
+        <h1>WDD 131: Dynamic Web Fundamentals – <span class="highlight">Filipe de Leonel Batista</span></h1>
+        <nav>
+            <ul>
+                <li><a href="#">LinkedIn</a></li>
+                <li><a href="#">Canvas</a></li>
+                <li><a href="#">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
+            </ul>
+        </nav>
     </header>
-    <nav>
-        <ul>
-            <li><a href="#">LinkedIn</a></li>
-            <li><a href="#">Canvas</a></li>
-            <li><a href="#">Scripture</a></li>
-            <li><a href="#">Final Project</a></li>
-        </ul>
-    </nav>
+
     <main class="container">
         <section class="info-box">
-            <div class="info-header">About Me</div>
+            <h2>About Me</h2>
             <div class="about-content">
                 <div class="text">
                     <p>My name is Filipe. I was born in South of Brazil, Rio Grande do Sul and live with my family in
@@ -40,13 +42,13 @@
                         spending time with them. I love to play with kids on park and I love to learn new things.</p>
                 </div>
                 <div class="photo">
-                    <img src="images/filipe.png" alt="Filipe Photo">
+                    <img src="images/filipe-optimized.webp" alt="Filipe Photo" width="150">
                 </div>
             </div>
-            <div class="mad-header">Rio Grande do Sul, Brazil</div>
+            <h2 class="mad-header">Rio Grande do Sul, Brazil</h2>
             <div class="mad-content">
                 <div class="flag">
-                    <img src="images/riograndedosul-flag.webp" alt="Official Flag of Rio Grande do Sul">
+                    <img src="images/riograndedosul-flag.webp" alt="Official Flag of Rio Grande do Sul" width="100">
                     <div class="caption">Official Flag of Rio Grande do Sul</div>
                 </div>
                 <div class="fact">
@@ -60,8 +62,9 @@
                 </div>
             </div>
         </section>
+
         <aside class="resources-box">
-            <div class="info-header">Web Dev Resources</div>
+            <h2>Web Dev Resources</h2>
             <ul>
                 <li><a href="#">Dev.to Community</a></li>
                 <li><a href="#">Smashing Magazine</a></li>
@@ -72,8 +75,9 @@
             </ul>
         </aside>
     </main>
+
     <footer>
-        <p>©<span id="currentYear"></span> 🤔 Filipe de Leonel Batista 😅 Brazil</p>
+        <p>&copy; <span id="currentYear"></span> 🤔 Filipe de Leonel Batista 😅 Brazil</p>
         <p id="lastModified"></p>
     </footer>
 </body>
