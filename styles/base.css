@@ -1,0 +1,162 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background: #1e4e79;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+}
+
+header h1 {
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+header .highlight {
+    color: #ffeb3b;
+}
+
+nav {
+    background: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    flex: 1;
+    text-align: center;
+}
+
+nav a {
+    display: block;
+    padding: 1rem;
+    color: #fff;
+    transition: background 0.3s;
+}
+
+nav a:hover {
+    background: #444;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 1rem;
+    max-width: 1000px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.info-box,
+.resources-box {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.info-header {
+    background: #1e4e79;
+    color: #fff;
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.about-content .text {
+    flex: 2;
+}
+
+.about-content .photo img {
+    max-width: 150px;
+    border-radius: 4px;
+}
+
+.mad-header {
+    padding: 0.75rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: center;
+    border-top: 1px solid #ccc;
+}
+
+.mad-content {
+    display: flex;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.flag {
+    flex: 1;
+    text-align: center;
+}
+
+.flag img {
+    max-width: 100px;
+    border: 1px solid #ccc;
+}
+
+.caption {
+    font-size: 0.8rem;
+    font-style: italic;
+    margin-top: 0.5rem;
+}
+
+.fact {
+    flex: 2;
+}
+
+.fact p {
+    margin-bottom: 0.5rem;
+}
+
+.resources-box ul {
+    list-style: disc inside;
+    padding: 1rem;
+}
+
+.resources-box li {
+    margin-bottom: 0.5rem;
+}
+
+.resources-box a {
+    color: #5a0db4;
+}
+
+footer {
+    background: #1e4e79;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
+
+footer span#currentYear,
+footer #lastModified {
+    color: #ffeb3b;
+    font-weight: bold;
+}
