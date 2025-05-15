@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  background: #f5f5f5;
+
+  width: 320px;
+  text-align: center;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.input-area {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background: #ccc;
+  padding: 1rem;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+
+  margin-bottom: 1.5rem;
+}
+
+.input-area label {
+  text-align: left;
+  font-weight: bold;
+}
+
+.input-area input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 2px;
+}
+
+.input-area button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #999;
+  border-radius: 2px;
+  background: #eee;
+  cursor: pointer;
+}
+
+.input-area button:hover {
+  background: #ddd;
+}
+
+.chapters-list {
+  list-style: none;
+  text-align: left;
+  padding: 0.2rem;
+}
+
+.chapters-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #aaa;
+  font-weight: bold;
+}
+
+.chapters-list li:last-child {
+  border-bottom: none;
+}
+
+.chapters-list button {
+  height: 40px;
+  width: 40px;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid #999;
+  border-radius: 2px;
+  background: #fff;
+  cursor: pointer;
+}
+
+.chapters-list button:hover {
+  background: #f2f2f2;
+}
