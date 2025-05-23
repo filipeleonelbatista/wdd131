@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brazil</title>
+  <link rel="stylesheet" href="styles/place.css">
+  <script defer src="scripts/place.js"></script>
+</head>
+<body>
+  <header>
+    <div class="logo">🇧🇷</div>
+    <h1>Brazil</h1>
+    <nav>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#weather">Weather</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <picture>
+      <source media="(min-width: 800px)" srcset="images/hero-desktop.webp">
+      <img src="images/hero-mobile.webp" alt="Scenic view of Brazil">
+    </picture>
+  </section>
+
+  <main>
+    <section id="about">
+      <h2>About Brazil</h2>
+      <p>Brazil is the largest country in South America, famous for its diverse culture, rich biodiversity, and natural landmarks such as the Amazon rainforest and the Iguazu Falls. It is home to vibrant cities like Rio de Janeiro and São Paulo, as well as renowned festivals like Carnival.</p>
+    </section>
+
+    <section id="weather">
+      <h2>Weather</h2>
+      <div class="weather-info">
+        <p>Temperature: <span id="temp">8</span> °C</p>
+        <p>Wind Speed: <span id="speed">10</span> km/h</p>
+        <p>Wind Chill: <span id="windchill">--</span></p>
+      </div>
+    </section>
+
+    <section id="gallery">
+      <h2>Gallery</h2>
+      <img src="images/rio.webp" alt="Rio de Janeiro skyline">
+      <img src="images/amazon.webp" alt="Amazon rainforest">
+      <img src="images/iguazu.jpg" alt="Iguazu Falls">
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <p>Email: contact@brazilinfo.com</p>
+      <p>Phone: +55 21 99999-9999</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; <span id="year"></span> Brazil</p>
+    <p>Last modified: <span id="lastmod"></span></p>
+  </footer>
+</body>
+</html>
