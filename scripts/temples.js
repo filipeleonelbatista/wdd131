@@ -70,14 +70,18 @@ const temples = [
         imageUrl: "images/sao-paulo-brazil.jpg"
     }
 ];
-
-
 const container = document.getElementById("temples-container");
 
 function createTempleCard(temple) {
     return `
     <div class="temple-card">
-      <img src="${temple.imageUrl}" width="640" height="360" alt="${temple.templeName} Temple" loading="lazy">
+      <img 
+        src="${temple.imageUrl}" 
+        alt="${temple.templeName} Temple" 
+        loading="lazy"
+        width="640"
+        height="360"
+      >
       <h2>${temple.templeName}</h2>
       <p><strong>Location:</strong> ${temple.location}</p>
       <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
@@ -87,36 +91,73 @@ function createTempleCard(temple) {
 }
 
 function displayTemples(list) {
-    container.innerHTML = list.map(createTempleCard).join("");
+    // container.innerHTML = list.map(createTempleCard).join("");
+    const main = document.getElementById("temples-container");
+
+    if (list.length === 0) {
+        main.classList.add("no-results");
+        main.innerHTML = `
+      <div class="no-results-message">
+        <p>No temples found matching this filter.</p>
+        <p>Please try a different filter or return to <a href="?filter=home">Home</a>.</p>
+      </div>
+    `;
+    } else {
+        main.classList.remove("no-results");
+        main.innerHTML = list.map(createTempleCard).join("");
+    }
+
 }
 
 function getYear(dedicatedStr) {
     return parseInt(dedicatedStr.split(",")[0]);
 }
 
-document.getElementById("home").addEventListener("click", () => displayTemples(temples));
+function getFilterFromURL() {
+    const params = new URLSearchParams(window.location.search);
+    return params.get("filter") || "home";
+}
 
-document.getElementById("old").addEventListener("click", () => {
-    const filtered = temples.filter(t => getYear(t.dedicated) < 1900);
-    displayTemples(filtered);
-});
+function applyFilter() {
+    const filter = getFilterFromURL();
+    let filtered = temples;
 
-document.getElementById("new").addEventListener("click", () => {
-    const filtered = temples.filter(t => getYear(t.dedicated) > 2000);
-    displayTemples(filtered);
-});
+    switch (filter) {
+        case "old":
+            filtered = temples.filter(t => getYear(t.dedicated) < 1900);
+            break;
+        case "new":
+            filtered = temples.filter(t => getYear(t.dedicated) > 2000);
+            break;
+        case "large":
+            filtered = temples.filter(t => t.area > 90000);
+            break;
+        case "small":
+            filtered = temples.filter(t => t.area < 10000);
+            break;
+        case "home":
+        default:
+            filtered = temples;
+    }
 
-document.getElementById("large").addEventListener("click", () => {
-    const filtered = temples.filter(t => t.area > 90000);
     displayTemples(filtered);
-});
+}
 
-document.getElementById("small").addEventListener("click", () => {
-    const filtered = temples.filter(t => t.area < 10000);
-    displayTemples(filtered);
-});
+function highlightActiveFilter() {
+    const currentFilter = getFilterFromURL();
+    document.querySelectorAll("header nav a").forEach(link => {
+        const url = new URL(link.href);
+        const filterParam = url.searchParams.get("filter");
+        if (filterParam === currentFilter) {
+            link.classList.add("active");
+        } else {
+            link.classList.remove("active");
+        }
+    });
+}
 
 document.getElementById("year").textContent = new Date().getFullYear();
 document.getElementById("lastModified").textContent = document.lastModified;
 
-displayTemples(temples);
+applyFilter();
+highlightActiveFilter();
