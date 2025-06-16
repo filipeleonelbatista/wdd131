@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio showcasing web development skills and projects">
+    <meta name="author" content="Filipe de Leonel Batista">
+    <meta name="keywords" content="Full Stack Developer, Web Development, Portfolio, React, Node.js">
+    <meta property="og:title" content="Filipe de Leonel Batista - Full Stack Developer">
+    <meta property="og:description" content="Full Stack Developer with expertise in React, Node.js, React Native and TypeScript">
+    <meta property="og:image" content="./images/filipe.png">
+    <title>Filipe de Leonel Batista - Full Stack Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/ending-project.css">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://filipeleonelbatista.github.io/wdd130/ending-project.html">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home">FB</a>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Hello, I'm <span class="highlight">Filipe de Leonel Batista</span></h1>
+            <p class="hero-subtitle">Full Stack Developer</p>
+            <p class="hero-description">Full Stack Developer with expertise in React, Node.js, React Native and TypeScript.
+                Solid experience in developing web and mobile applications with a focus on performance, clean architecture
+                and best practices.</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" id="view-work-btn">View My Work</button>
+                <button class="btn btn-secondary" id="contact-btn">Get In Touch</button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img 
+                src="./images/filipe.png"
+                alt="Filipe de Leonel Batista" 
+                class="profile-image"
+                loading="lazy"
+            >
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Experience in projects with complex integrations via REST APIs, WebSockets and Integrations with
+                        Artificial Intelligence, in addition to applying automated tests and CI/CD. Strong presence in agile
+                        and sometimes multidisciplinary environments.</p>
+                    <div class="skills">
+                        <h3>Technical Skills</h3>
+                        <div class="skill-tags" id="skill-tags">
+                            <!-- Skills will be populated by JavaScript -->
+                        </div>
+                    </div>
+                    <div class="stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="87">0</span>
+                            <span class="stat-label">Active Customers</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="4">0</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-target="100">0</span>
+                            <span class="stat-label">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web">Web Apps</button>
+                <button class="filter-btn" data-filter="mobile">Mobile</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+            </div>
+            <div class="projects-grid" id="projects-grid">
+                <!-- Projects will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Work Together</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Feel free to reach out!</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <span>filipe.x2016@gmail.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">📱</span>
+                            <span>+55 (51) 99273-6445</span>
+                        </div>
+                        <div class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <span>Remote - Brazil</span>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <select id="subject" name="subject">
+                            <option value="">Select a subject</option>
+                            <option value="project">New Project</option>
+                            <option value="collaboration">Collaboration</option>
+                            <option value="consultation">Consultation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>Filipe de Leonel Batista</h4>
+                    <p>Full Stack Developer passionate about creating amazing digital experiences.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Visit Counter</h4>
+                    <p>You are visitor number: <span id="visitor-count">0</span></p>
+                    <button id="reset-counter" class="btn btn-small">Reset Counter</button>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Filipe de Leonel Batista. All rights reserved.</p>
+                <p><a href="references.html">References & Citations</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for project details -->
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modal-body">
+                <!-- Modal content will be populated by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts/ending-project.js"></script>
+</body>
+
+</html>
