@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted - Product Review System</title>
+    <meta name="description" content="Thank you for submitting your product review">
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="styles/review.css">
+</head>
+<body>
+    <header>
+        <h1>Review Submitted Successfully!</h1>
+        <p>Thank you for sharing your feedback</p>
+    </header>
+
+    <main>
+        <div class="confirmation-container">
+            <div class="success-icon">
+                <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="12" cy="12" r="10" stroke="#27ae60" stroke-width="2"/>
+                    <path d="m9 12 2 2 4-4" stroke="#27ae60" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </div>
+            
+            <h2>Your Review Has Been Recorded</h2>
+            
+            <div class="review-summary" id="reviewSummary">
+                <!-- Review details will be populated by JavaScript -->
+            </div>
+            
+            <div class="counter-section">
+                <h3>Review Statistics</h3>
+                <div class="counter-display">
+                    <span class="counter-label">Total Reviews Completed:</span>
+                    <span class="counter-value" id="reviewCounter">0</span>
+                </div>
+                <p class="counter-note">This counter tracks reviews completed on this device</p>
+            </div>
+            
+            <div class="action-buttons">
+                <a href="form.html" class="btn btn-primary">Submit Another Review</a>
+                <a href="../index.html" class="btn btn-secondary">Return to Home</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Product Review System. All rights reserved.</p>
+        <p>BYU-Idaho | WDD 131</p>
+    </footer>
+
+    <script src="scripts/review.js"></script>
+</body>
+</html>
