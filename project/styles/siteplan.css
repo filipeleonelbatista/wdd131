@@ -1,0 +1,345 @@
+/* Typography - Using Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Open+Sans:wght@400;600&display=swap');
+
+/* Color Schema Variables */
+:root {
+    --primary-color: #2E86AB;    /* Ocean Blue */
+    --secondary-color: #A23B72;  /* Deep Pink/Purple */
+    --accent-color: #F18F01;     /* Orange */
+    --text-dark: #333333;
+    --text-light: #666666;
+    --background-light: #F8F9FA;
+    --white: #FFFFFF;
+    --shadow-light: rgba(0, 0, 0, 0.1);
+    --shadow-dark: rgba(0, 0, 0, 0.5);
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--text-dark);
+    background-color: var(--background-light);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Typography Styles */
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 1rem;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: var(--white);
+    margin: 2rem 0 1rem 0;
+    padding: 0.5rem;
+    background-color: var(--primary-color);
+    border-radius: 5px;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin: 1.5rem 0 0.5rem 0;
+}
+
+h4 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+p, li {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    color: var(--text-dark);
+}
+
+/* Typography Classes */
+.montserrat-bold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.montserrat-semibold {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.opensans-regular {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* Layout Styles */
+.section {
+    background: var(--white);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px var(--shadow-light);
+    transition: box-shadow 0.3s ease;
+}
+
+.section:hover {
+    box-shadow: 0 4px 20px var(--shadow-light);
+}
+
+/* Color Palette Styles */
+.color-palette {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.color-box {
+    width: 150px;
+    height: 100px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    font-weight: 600;
+    text-shadow: 1px 1px 2px var(--shadow-dark);
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.color-box:hover {
+    transform: translateY(-2px);
+}
+
+.primary { 
+    background-color: var(--primary-color); 
+}
+
+.secondary { 
+    background-color: var(--secondary-color); 
+}
+
+.accent { 
+    background-color: var(--accent-color); 
+}
+
+/* Font Example Styles */
+.font-example {
+    margin: 1rem 0;
+    padding: 1rem;
+    border-left: 4px solid var(--accent-color);
+    background-color: var(--background-light);
+    border-radius: 0 8px 8px 0;
+    transition: border-left-width 0.3s ease;
+}
+
+.font-example:hover {
+    border-left-width: 6px;
+}
+
+/* Wireframe Styles */
+.wireframe-container {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.wireframe {
+    border: 2px solid var(--primary-color);
+    padding: 1rem;
+    background-color: var(--white);
+    border-radius: 8px;
+    max-width: 400px;
+    transition: transform 0.3s ease;
+}
+
+.wireframe:hover {
+    transform: scale(1.02);
+}
+
+.wireframe-box {
+    border: 1px solid #ccc;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background-color: #f9f9f9;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text-light);
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.wireframe-box:hover {
+    background-color: #f0f0f0;
+}
+
+/* Mobile Wireframe */
+.mobile-wireframe .wireframe-box {
+    width: 100%;
+}
+
+/* Desktop Wireframe */
+.desktop-wireframe {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 0.5rem;
+    max-width: 500px;
+}
+
+.desktop-title {
+    grid-column: 1 / -1;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+/* List Styles */
+ul {
+    padding-left: 2rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+ul li::marker {
+    color: var(--accent-color);
+}
+
+/* Strong Text Styling */
+strong {
+    color: var(--secondary-color);
+}
+
+/* Link Styles (if any links are added) */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    .section {
+        padding: 1.5rem;
+    }
+    
+    .color-palette {
+        justify-content: center;
+    }
+    
+    .color-box {
+        width: 120px;
+        height: 80px;
+        font-size: 0.9rem;
+    }
+    
+    .wireframe-container {
+        flex-direction: column;
+    }
+    
+    .wireframe {
+        max-width: 100%;
+    }
+    
+    .desktop-wireframe {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    .desktop-wireframe .wireframe-box {
+        grid-column: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+    
+    h1 {
+        font-size: 1.8rem;
+    }
+    
+    .section {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+    
+    .color-box {
+        width: 100px;
+        height: 70px;
+        font-size: 0.8rem;
+    }
+    
+    .font-example {
+        padding: 0.8rem;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        color: black;
+        padding: 0;
+        max-width: none;
+    }
+    
+    .section {
+        box-shadow: none;
+        border: 1px solid #ccc;
+        page-break-inside: avoid;
+    }
+    
+    .color-box {
+        border: 1px solid #000;
+    }
+    
+    .wireframe {
+        border: 2px solid #000;
+    }
+}
